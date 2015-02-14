@@ -86,6 +86,9 @@
     <Compile Include="AddEvent.xaml.cs">
       <DependentUpon>AddEvent.xaml</DependentUpon>
     </Compile>
+    <Compile Include="LandingPage.xaml.cs">
+      <DependentUpon>LandingPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
   </ItemGroup>
   <ItemGroup>
     <Page Include="AddEvent.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LandingPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
