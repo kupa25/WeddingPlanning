@@ -26,6 +26,15 @@ namespace WeddingPlanner
     public sealed partial class App : Application
     {
 #if WINDOWS_PHONE_APP
+// http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
+public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient ShaadiTimeClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+"http://localhost:56065/");
+// public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient ShaadiTimeClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
+//                             "https://shaaditime.azure-mobile.net/",
+//                             "TRmxYQuqsTeLjUxkJhabhLjlaDGvZJ73");
+#endif
+
+#if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
 
@@ -103,6 +112,10 @@ namespace WeddingPlanner
 
             // Ensure the current window is active
             Window.Current.Activate();
+#if WINDOWS_PHONE_APP
+// http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
+WeddingPlanner.ShaadiTimePush.UploadChannel();
+#endif
         }
 
 #if WINDOWS_PHONE_APP

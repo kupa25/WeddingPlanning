@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WeddingPlanner", "WeddingPlanner", "{D51F19E0-D725-4FBA-A83E-E8E0624F50BE}"
 EndProject
@@ -10,6 +10,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingPlanner.Windows", "WeddingPlanner\WeddingPlanner.Windows\WeddingPlanner.Windows.csproj", "{2D92710D-9DB5-4CB6-8D13-F5F7A6120627}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeddingPlanner.WindowsPhone", "WeddingPlanner\WeddingPlanner.WindowsPhone\WeddingPlanner.WindowsPhone.csproj", "{3434AF3B-AB1F-48FD-A7EA-6CFFCD704CA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShaadiTimeMobileService", "ShaadiTimeMobileService\ShaadiTimeMobileService.csproj", "{27755FDD-0EC9-4504-83B2-E2011CDA14DE}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -72,6 +74,16 @@ Global
 		{3434AF3B-AB1F-48FD-A7EA-6CFFCD704CA5}.Release|x86.ActiveCfg = Release|x86
 		{3434AF3B-AB1F-48FD-A7EA-6CFFCD704CA5}.Release|x86.Build.0 = Release|x86
 		{3434AF3B-AB1F-48FD-A7EA-6CFFCD704CA5}.Release|x86.Deploy.0 = Release|x86
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Release|x64.ActiveCfg = Release|Any CPU
+		{27755FDD-0EC9-4504-83B2-E2011CDA14DE}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

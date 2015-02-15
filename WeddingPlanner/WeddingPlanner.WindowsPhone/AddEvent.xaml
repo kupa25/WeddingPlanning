@@ -12,6 +12,7 @@
         <Image Height="100"/>
         <Image Height="100"/>
         <TextBox Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Wedding Title"/>
+        <TextBox x:Name="txtCoordinator" Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Cooridnator's Name"/>
         <TextBox Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Phone Number"/>
         <TextBox Margin="0" TextWrapping="Wrap" Text="" VerticalAlignment="Stretch" PlaceholderText="Email" InputScope="EmailSmtpAddress"/>
         <Button x:Name="btnCreateEvent" Content="Create Event" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="btnCreateEvent_Click"/>
