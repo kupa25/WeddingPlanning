@@ -27,8 +27,8 @@ namespace WeddingPlanner
     public sealed partial class App : Application
     {
         private Geolocator Geolocator { get; set; }
-        public static double Latitude { get; set; }
-        public static double Longitude { get; set; }
+        public static double? Latitude { get; set; }
+        public static double? Longitude { get; set; }
 
 #if WINDOWS_PHONE_APP
 // http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409

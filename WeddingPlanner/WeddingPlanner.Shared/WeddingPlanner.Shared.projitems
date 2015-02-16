@@ -16,5 +16,6 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Util.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Wedding.cs" />
   </ItemGroup>
 </Project>

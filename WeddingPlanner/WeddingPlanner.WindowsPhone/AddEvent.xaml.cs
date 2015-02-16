@@ -38,11 +38,28 @@ namespace WeddingPlanner
         {
         }
 
-        private void btnCreateEvent_Click(object sender, RoutedEventArgs e)
+        private async void btnCreateEvent_Click(object sender, RoutedEventArgs e)
         {
             //Retrieve the location of the event
+            while (App.Longitude == null || App.Latitude == null)
+	        {
+                 //just wait
+	        }
+
             //Store the information in Azure mobile service
-            App.ShaadiTimeClient.
+            var WeddingEvent = new Wedding
+            {
+                Title = txtTitle.Text,
+                CoordinatorName = txtCoordinator.Text,
+                CoordinatorPhone = txtCoordinatorPhone.Text,
+                EmailAddress = txtEmail.Text,
+                Lattitude = App.Latitude.Value,
+                Longitude = App.Longitude.Value,
+                JoinCode = new Guid().ToString().Substring(0, 5)
+            };
+
+            App.ShaadiTimeClient.GetTable<Wedding>().InsertAsync(WeddingEvent);
+
             //Display and email the join code for guests
             //Navigate to the wedding page
         }
