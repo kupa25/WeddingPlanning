@@ -15,6 +15,7 @@ namespace WeddingPlanner
     {
         public async static void UploadChannel()
         {
+            return;
             var channel = await Windows.Networking.PushNotifications.PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
 
             try

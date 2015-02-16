@@ -42,7 +42,7 @@ namespace WeddingPlanner
         {
             //Retrieve the location of the event
             //Store the information in Azure mobile service
-
+            App.ShaadiTimeClient.
             //Display and email the join code for guests
             //Navigate to the wedding page
         }

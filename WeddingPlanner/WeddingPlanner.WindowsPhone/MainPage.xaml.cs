@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,13 +23,24 @@ namespace WeddingPlanner
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //private Geolocator Geolocator { get; set; }
+        //private double Latitude { get; set; }
+        //private double Longitude { get; set; }
+
         public MainPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            //Load all of weddings happening in the current location
+            LoadEvents();
+        }
+
+        private async void LoadEvents()
+        {
+            while (App.Latitude == null || App.Longitude == null)
+            {
+                //load events
+            }
         }
 
         /// <summary>
@@ -45,6 +57,14 @@ namespace WeddingPlanner
             // Windows.Phone.UI.Input.HardwareButtons.BackPressed event.
             // If you are using the NavigationHelper provided by some templates,
             // this event is handled for you.
+        }
+
+        private void btnAddEvent_Click(object sender, RoutedEventArgs e)
+        {
+            if (!Frame.Navigate(typeof(AddEvent)))
+            {
+                throw new Exception("Failed to navigate");
+            }
         }
     }
 }

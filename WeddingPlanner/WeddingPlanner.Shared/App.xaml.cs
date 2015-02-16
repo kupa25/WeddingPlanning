@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
+using Windows.Devices.Geolocation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,6 +26,10 @@ namespace WeddingPlanner
     /// </summary>
     public sealed partial class App : Application
     {
+        private Geolocator Geolocator { get; set; }
+        public static double Latitude { get; set; }
+        public static double Longitude { get; set; }
+
 #if WINDOWS_PHONE_APP
 // http://go.microsoft.com/fwlink/?LinkId=290986&clcid=0x409
 public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient ShaadiTimeClient = new Microsoft.WindowsAzure.MobileServices.MobileServiceClient(
@@ -46,6 +51,19 @@ public static Microsoft.WindowsAzure.MobileServices.MobileServiceClient ShaadiTi
         {
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
+
+            Latitude = null;
+            Longitude = null;
+            Geolocator = new Geolocator();
+            Geolocator.DesiredAccuracy = PositionAccuracy.High;
+            Geolocator.MovementThreshold = 10;
+            Geolocator.PositionChanged += geolocator_PositionChanged;
+        }
+
+        private void geolocator_PositionChanged(Windows.Devices.Geolocation.Geolocator sender, PositionChangedEventArgs args)
+        {
+            Latitude = args.Position.Coordinate.Latitude;
+            Longitude = args.Position.Coordinate.Longitude;
         }
 
         /// <summary>
